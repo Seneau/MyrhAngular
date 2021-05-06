@@ -1,0 +1,67 @@
+{
+  "name": "Conge",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "idConge",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dateDebut",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dateRetourEffective",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "tracker",
+      "otherEntityRelationshipName": "conge",
+      "relationshipName": "tracker",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "recuperation",
+      "otherEntityRelationshipName": "conge",
+      "relationshipName": "recuperation",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "congeData",
+      "otherEntityRelationshipName": "conge",
+      "relationshipName": "congeData"
+    }
+  ],
+  "entityTableName": "conge",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": [
+    "Myrh",
+    "Myconge"
+  ]
+}

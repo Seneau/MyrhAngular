@@ -1,0 +1,114 @@
+{
+  "name": "Agent",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "equipe",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "matricule",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "fonction",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "statut",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "taux",
+      "fieldType": "Float",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "affectation",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "etablissement",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "direction",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "matriculeN",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nomN",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serviceSecteur",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "role",
+      "otherEntityRelationshipName": "agent",
+      "relationshipName": "role"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "users",
+      "otherEntityRelationshipName": "agent",
+      "relationshipName": "users",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "agent",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": [
+    "Myrh",
+    "Myuser"
+  ]
+}
