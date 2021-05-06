@@ -1,0 +1,18 @@
+{
+  "name": "Users",
+  "fields": [],
+  "relationships": [],
+  "entityTableName": "users",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["Myrh", "Myuser"],
+  "microserviceName": "Myuser",
+  "clientRootFolder": "Myuser",
+  "databaseType": "sql",
+  "changelogDate": "20210506084632"
+}
